@@ -151,6 +151,9 @@ header p{
 .color-carta{
   background-color: var(--color-tono4);
 }
+.card-title{
+  color: var(--color-tono1);
+}
 
 .footer{
   min-height: 200px;

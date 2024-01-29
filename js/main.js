@@ -57,7 +57,7 @@ window.addEventListener('DOMContentLoaded', event => {
 window.sr = ScrollReveal();
 
 sr.reveal('.animacion', {
-    duration: 3300,
+    duration: 2900,
     origin: 'top',
     distance: '-100px',
 });

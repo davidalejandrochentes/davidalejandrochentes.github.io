@@ -7,6 +7,8 @@
     --color-tono2: #9BA8AB;
     --color-tono1: #CCD0CF;
     --color-deg: #4a5c6a8e;
+    --color-azul: #0d6dfd;
+    --color-azul-deg: #0d6dfd8a;
 }
 
 *{
@@ -15,6 +17,7 @@
     box-sizing: border-box;
     color: var(--color-tono1);
 }
+
 
 /**********************************************************/
 
@@ -37,7 +40,7 @@
     font-weight: 700;
   }
   #mainNav .navbar-brand {
-    color: var(--color-tono1);/*color de del titilo de la pagina en el nav*/
+    color: var(--color-azul-deg);/*color de del titilo de la pagina en el nav*/
     letter-spacing: 0.0625em;
     text-transform: uppercase;
   }
@@ -73,7 +76,7 @@
     #mainNav.navbar-shrink {
       padding-top: 1rem;
       padding-bottom: 1rem;
-      background-color: var(--color-tono6);/*color de el nav en escrool*/
+      background-color: black;/*color de el nav en escrool*/
     }
     #mainNav.navbar-shrink .navbar-brand {
       font-size: 1.25em;
@@ -115,13 +118,33 @@ header p{
   color: white;
 }
 
+.bg-card{
+  background-color: var(--color-azul-deg);
+}
+
+.bg-herra{
+  background-color: var(--color-azul-deg);
+}
+
 .boton{
-  background: var(--color-deg);
+  background: var(--color-azul-deg);
   color: white;
 }
+
 .boton:hover{
-  background: var(--color-tono4);
-  color: white;
+  background-color: var(--color-azul);
+}
+
+span{
+  color: var(--color-azul);
+}
+
+.reflex{
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+.borde{
+  border: 2px solid var(--color-azul-deg);
 }
 
 /***************************************************************/
@@ -140,6 +163,11 @@ header p{
   min-height: 400px;
   background-color: var(--color-tono5);  
 }
+
+.fondo-negro{
+  background-color: var(--color-tono6);
+}
+
 .iconos{
   font-size: 70px;
 }
@@ -151,6 +179,12 @@ header p{
   min-height: 400px;
   background-color: var(--color-tono5);  
 }
+
+.section5{
+  min-height: 400px;
+  background-color: var(--color-tono5);  
+}
+
 .color-carta{
   background-color: var(--color-tono4);
 }

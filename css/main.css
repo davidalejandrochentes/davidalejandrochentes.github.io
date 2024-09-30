@@ -118,6 +118,12 @@ header p{
   color: white;
 }
 
+.img-shadow{
+  filter: drop-shadow(
+      0 0 10px rgba(163, 158, 158, 0.8)
+  );
+}
+
 .bg-card{
   background-color: var(--color-azul-deg);
 }

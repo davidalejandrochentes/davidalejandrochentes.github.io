@@ -12,7 +12,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-        <link rel="icon" href="archivos/logo.png" type="image/png" sizes="16x16">
+        <link rel="icon" href="image/" type="image/png" sizes="16x16">
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <link rel="stylesheet" href="css/main.css">
@@ -257,29 +257,154 @@
         <section class="section4 p-5" id="portafoleo">
             <p class="text-center animacion mt-5 mt-md-5 mb-0">Portafoleo ​​​💼​</p>
             <h3 class="fs-3 text-center animacion"><span>Proyectos</span> destacados <span>que reflejan</span> <br> mi <span>experiencia y creatividad</span>. ​​​​🥇​</h3>
+            
             <div class="row pe-md-5 pt-md-5">
-                <div class="col-12 col-md-6 ps-2 ps-md-5 pe-2 pe-md-5 pt-3 text-start mt-auto mb-auto animacion-derecha">
-                    <p class="">m<span class="text-danger">UP</span></p>
-                    <a href="#sobre_mi" class="btn boton btn-lg rounded-pill  border">Ver Imagenes ​​​👀​​</a>
-                    <a href="#sobre_mi" class="btn boton btn-lg rounded-pill  border">Código ​​​👀​​</a>
+                <div class="col-12 col-md-6 ps-2 ps-md-5 pe-2 pe-md-5 pt-3 text-start mt-auto mb-auto">
+                    <p class="text-end animacion-derecha">m<span class="text-danger">UP</span> es un software diseñado para gestionar de manera eficiente el mantenimiento en diversas áreas de la empresa, optimizando los procesos mediante alertas programables que notifican automáticamente cuando se aproxima una fecha de mantenimiento. Este sistema ayuda a los usuarios a estar siempre informados y preparados, evitando retrasos y asegurando un flujo constante de trabajo. Además, permite organizar y hacer un seguimiento detallado de las tareas, garantizando que cada área reciba la atención necesaria en el momento adecuado, y facilita la exportación de toda la información de manera clara y ordenada para un acceso rápido a los informes.</p>
+                    <div class="d-flex justify-content-end align-items-center">                      
+                        
+                        <button type="button" class="btn boton btn-lg rounded-pill border m-1" data-bs-toggle="modal" data-bs-target="#modalmUPimage">
+                            Ver Imagenes 🖼️​​​​👀​​
+                        </button>
+                        <div class="modal fade" id="modalmUPimage" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content bg-dark">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalLabel">🖼️​​​​👀​​​</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="image/mUP/1.png" class="d-block w-100 borde" alt="...">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="image/mUP/2.png" class="d-block w-100 borde" alt="...">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="image/mUP/3.png" class="d-block w-100 borde" alt="...">
+                                                </div>
+                                                <div class="carousel-item active">
+                                                    <img src="image/mUP/4.png" class="d-block w-100 borde" alt="...">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="image/mUP/5.png" class="d-block w-100 borde" alt="...">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="image/mUP/6.png" class="d-block w-100 borde" alt="...">
+                                                </div>
+                                            </div>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon bg-primary rounded" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon bg-primary rounded" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn boton btn-lg rounded-pill border m-1" data-bs-dismiss="modal">Cerrar 🗝️​</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="button" class="btn boton btn-lg rounded-pill border m-1" data-bs-toggle="modal" data-bs-target="#modalmUPcode">
+                            Leer Código ​​📑​👀​
+                        </button>
+                        <div class="modal fade" id="modalmUPcode" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content bg-dark">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalLabel">✋​</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        El código de este proyecto es privado, contacte al desarrollador para ver el código
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn boton btn-lg rounded-pill border m-1" data-bs-dismiss="modal">Cerrar 🗝️​</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-12 col-md-6 ps-2 ps-md-5 pe-2 pe-md-5 pt-3">
                     <img src="image/mUP/1.png" alt="" class="d-block w-100 animacion-izquierda rounded border">
                 </div>
             </div>
+            
             <div class="row pe-md-5 pt-md-5">
                 <div class="col-12 col-md-6 ps-2 ps-md-5 pe-2 pe-md-5 pt-3">
                     <img src="image/Vibrosoft/1.png" alt="" class="d-block w-100 rounded border animacion-derecha">
                 </div>
-                <div class="col-12 col-md-6 ps-2 ps-md-5 pe-2 pe-md-5 pt-3 text-start mt-auto mb-auto animacion-izquierda">
-                    <p class="">m<span class="text-danger">UP</span></p>
-                    <a href="#sobre_mi" class="btn boton btn-lg rounded-pill border">Ver Imagenes ​​​👀​​</a>
+                <div class="col-12 col-md-6 ps-2 ps-md-5 pe-2 pe-md-5 pt-3 text-start mt-auto mb-auto">
+                    <p class="animacion-izquierda">Vibrosoft fue desarrollado para interactuar de manera remota con dispositivos de monitoreo, permitiendo enviar y recibir información desde los distintos módulos de adquisición sin necesidad de estar físicamente presente. El software incluye sistemas que detectan si alguno de los módulos está interrumpido, facilitando una respuesta rápida ante posibles fallos. Además, Vibrosoft gestiona los permisos de los usuarios registrados en el sistema, otorgando o restringiendo el acceso a diferentes funcionalidades dependiendo del tipo de usuario, lo que garantiza un control seguro y eficiente del uso del sistema.</p>
+                    
+                    <button type="button" class="btn boton btn-lg rounded-pill border m-1" data-bs-toggle="modal" data-bs-target="#modalVibrosoftimage">
+                        Ver Imagenes 🖼️​​​​👀​​
+                    </button>
+                    <div class="modal fade" id="modalVibrosoftimage" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content bg-dark">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modalLabel">🖼️​​​​👀​​​</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="image/Vibrosoft/1.png" class="d-block w-100 borde" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="image/Vibrosoft/2.png" class="d-block w-100 borde" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="image/Vibrosoft/3.png" class="d-block w-100 borde" alt="...">
+                                            </div>
+                                            <div class="carousel-item active">
+                                                <img src="image/Vibrosoft/4.png" class="d-block w-100 borde" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="image/Vibrosoft/5.png" class="d-block w-100 borde" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="image/Vibrosoft/6.png" class="d-block w-100 borde" alt="...">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon bg-primary rounded" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon bg-primary rounded" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn boton btn-lg rounded-pill border m-1" data-bs-dismiss="modal">Cerrar 🗝️​</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="" class="btn boton btn-lg rounded-pill border m-1">Leer Código ​​​📑​👀​​</a>
                 </div>
             </div>
+            
             <div class="row pe-md-5 pt-md-5">
-                <div class="col-12 col-md-6 ps-2 ps-md-5 pe-2 pe-md-5 pt-3 text-start mt-auto mb-auto animacion-derecha">
-                    <p class="">m<span class="text-danger">UP</span></p>
-                    <a href="#sobre_mi" class="btn boton btn-lg rounded-pill border">Ver Imagenes ​​​👀​​</a>
+                <div class="col-12 col-md-6 ps-2 ps-md-5 pe-2 pe-md-5 pt-3 text-start mt-auto mb-auto">
+                    <p class="text-end animacion-derecha">Esta API fue desarrollada con el objetivo de realizar operaciones en un listado de desarrolladores, permitiendo ejecutar las funciones básicas que se esperan de una API, como crear, leer, actualizar y eliminar datos. Además, cuenta con documentación automática, lo que facilita su uso y comprensión por parte de los desarrolladores, proporcionando una guía clara sobre las funcionalidades disponibles y cómo interactuar con ellas. Esta API es ideal para la gestión eficiente de información relacionada con desarrolladores y su integración en otros sistemas o aplicaciones.</p>
+                    <div class="d-flex justify-content-end align-items-center">
+                        <a href="" class="btn boton btn-lg rounded-pill border m-1">Ver Imagenes 🖼️​​​​👀​​</a>
+                        <a href="https://github.com/davidalejandrochentes/API-1" target="_blank" class="btn boton btn-lg rounded-pill border m-1">Leer Código ​​​📑​👀​​</a>
+                    </div>
                 </div>
                 <div class="col-12 col-md-6 ps-2 ps-md-5 pe-2 pe-md-5 pt-3">
                     <img src="image/API/1.png" alt="" class="d-block w-100 rounded border animacion-izquierda">
@@ -290,11 +415,11 @@
         <footer class="footer p-5" id="contacto">
             <div class="row">
                 <div class=" col-12 col-md-3 ps-2 ps-md-5 pe-2 pe-md-5 pt-3 animacion">
-                    <h3>Dirección</h3>
+                    <h3>Dirección 📍​</h3>
                     <p><i class="bi bi-pin-map-fill"></i>Calle Roberto Amaran #64 E/ Gustavo Lores & Osmany Arenado, PR, PR , CU</p>
                 </div>
                 <div class=" col-12 col-md-3 ps-2 ps-md-5 pe-2 pe-md-5 pt-3 animacion">
-                    <h3>Redes Sociales</h3>
+                    <h3>Redes Sociales 🤝​</h3>
                     <a href="https://www.facebook.com/profile.php?id=100089782765332" class="text-decoration-none" target="_blank"><p class="m-0"><i class="bi bi-facebook"></i> facebook</p></a>
                     <a href="http://linkedin.com/in/david-alejandro-chentes-ramos-092329256" class="text-decoration-none" target="_blank"><p class="m-0"><i class="bi bi-linkedin"></i> linkeding</p></a>
                     <a href="https://twitter.com/ChentesDavid" class="text-decoration-none" target="_blank"><p class="m-0"><i class="bi bi-twitter-x"></i> twiter</p></a>
@@ -303,13 +428,13 @@
                     <a href="https://github.com/davidalejandrochentes" class="text-decoration-none" target="_blank"><p class="m-0"><i class="bi bi-github"></i> GitHub</p></a>
                 </div>
                 <div class=" col-12 col-md-3 ps-2 ps-md-5 pe-2 pe-md-5 pt-3 animacion">
-                    <h3>Contacto Directo</h3>
+                    <h3>Contacto Directo 📞​</h3>
                     <a href="mailto:davidalejandrochentes@gmail.com" class="text-decoration-none" target="_blank"><p class="m-0">davidalejandrochentes@gmail.com</p></a>
                     <a href="tel:+5354214040" class="text-decoration-none" target="_blank"><p class="m-0">+5354214040</p></a>
                     <a href="tel:+5354214040" class="text-decoration-none" target="_blank"><p class="m-0">+12242881535</p></a>
                 </div>
                 <div class=" col-12 col-md-3 ps-2 ps-md-5 pe-2 pe-md-5 pt-3 animacion">
-                    <h3>Inquietudes</h3>
+                    <h3>Inquietudes 🤔​</h3>
                     <form action="https://formsubmit.co/davidalejandrochentes@gmail.com" method="POST">
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Tu Email</label>
@@ -328,8 +453,7 @@
             </div>
         </footer>
     
-        <script  src="js/main.js"></script>
         <script src="js/bootstrap.js"></script>
-
+        <script  src="js/main.js"></script>
     </body>
 </html>

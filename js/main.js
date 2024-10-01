@@ -73,3 +73,5 @@ sr.reveal('.animacion-izquierda', {
     origin: 'left',
     distance: '-100px',
 });
+
+sr.reveal('.modal', { reset: false }, { afterReveal: null });

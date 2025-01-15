@@ -153,10 +153,6 @@ span{
   color: var(--color-azul);
 }
 
-.reflex{
-  font-family: "Pixelify Sans", sans-serif;
-}
-
 .borde{
   border: 2px solid var(--color-azul-deg);
 }
@@ -209,4 +205,24 @@ span{
 .footer{
   min-height: 200px;
   background-color: var(--color-tono6);
+}
+
+.expe {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Asegura que se adapte */
+  min-height: 23vh; /* Ajusta este valor según tu diseño */
+}
+
+@media (max-width: 1508px) {
+  .expe {
+    min-height: 30vh; /* Incrementa la altura mínima */
+  }
+}
+
+@media (max-width: 1298px) {
+  .expe {
+    min-height: 32vh; /* Incrementa la altura mínima */
+  }
 }

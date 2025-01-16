@@ -226,3 +226,12 @@ span{
     min-height: 32vh; /* Incrementa la altura mínima */
   }
 }
+
+.section-mUP{
+  min-height: 400px;
+  background-color: var(--color-tono5);  
+}
+
+.section-sm{
+  max-width: 100vh;
+}

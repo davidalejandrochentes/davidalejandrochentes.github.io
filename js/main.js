@@ -62,16 +62,4 @@ sr.reveal('.animacion', {
     distance: '-100px',
 });
 
-sr.reveal('.animacion-derecha', {
-    duration: 2900,
-    origin: 'right',
-    distance: '-100px',
-});
-
-sr.reveal('.animacion-izquierda', {
-    duration: 2900,
-    origin: 'left',
-    distance: '-100px',
-});
-
 sr.reveal('.modal', { reset: false }, { afterReveal: null });

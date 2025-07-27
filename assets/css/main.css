@@ -1,0 +1,98 @@
+
+/* Estilos base y fondo */
+body {
+    background-image: url('../img/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Contenedor principal para evitar desbordamiento de animaciones */
+main {
+    overflow-x: hidden;
+}
+
+/* Estilo Glassmorphism permanente para la Navbar */
+#navbar {
+    background-color: rgba(30, 41, 59, 0.5); /* bg-slate-800 con opacidad */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* Soporte para Safari */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 0;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    border-radius: 0;
+    width: 100%;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Clase genérica para elementos con efecto vidrio */
+.glass-card {
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px); /* Soporte para Safari */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 1.5rem; /* Corresponde a rounded-2xl de Tailwind */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Ajuste para que el contenido de las secciones no quede oculto por la navbar fija */
+main section:first-child {
+    padding-top: 80px; /* Ajusta este valor según la altura de tu navbar */
+}
+
+/* --- Preloader Styles --- */
+#preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background-color: #0f172a; /* bg-slate-900 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.preloader-icon {
+    width: 100px;
+    height: 100px;
+    stroke: #38bdf8; /* sky-400 */
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+#preloader.preloader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+/* --- Estilos para el menú m��vil con transición --- */
+.mobile-menu-container {
+    /* Efecto Glassmorphism */
+    background-color: rgba(255, 255, 255, 0.08); /* Mismo fondo que .glass-card */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    /* Transición */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s;
+}
+
+.mobile-menu-container.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}

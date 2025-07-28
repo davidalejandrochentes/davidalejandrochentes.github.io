@@ -1,4 +1,3 @@
-
 // --- Lógica para el Preloader ---
 const preloader = document.getElementById('preloader');
 window.addEventListener('load', () => {
@@ -7,36 +6,41 @@ window.addEventListener('load', () => {
     }
 });
 
-// --- Lógica para el menú móvil ---
+// --- Lógica para el ícono del menú móvil ---
 const mobileMenuButton = document.getElementById('mobile-menu-button');
-const mobileMenu = document.getElementById('mobile-menu');
-const navLinks = document.querySelectorAll('#mobile-menu a'); // Selecciona los enlaces dentro del menú
+const icon = mobileMenuButton.querySelector('i');
 
-// Función para alternar la visibilidad del menú
-const toggleMenu = () => {
-    const isOpen = mobileMenu.classList.toggle('is-open');
-
-    // Cambiar el ícono de menú a 'x' y viceversa
-    const icon = mobileMenuButton.querySelector('i');
-    icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
-    lucide.createIcons(); // Vuelve a renderizar los íconos de Lucide
-
-    // Bloquear el scroll del body cuando el menú está abierto
-    document.body.style.overflow = isOpen ? 'hidden' : '';
+// Función para cambiar el ícono al abrir/cerrar el menú de Bootstrap
+const toggleIcon = () => {
+    const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+    // El evento 'shown.bs.collapse' se dispara después de que el menú se abre
+    // El evento 'hidden.bs.collapse' se dispara después de que el menú se cierra
+    // Por eso verificamos el estado 'aria-expanded' que cambia al hacer clic
+    
+    // Si está a punto de expandirse, cambia a 'x'
+    if (!isExpanded) {
+        icon.setAttribute('data-lucide', 'x');
+    } else { // Si está a punto de colapsarse, cambia a 'menu'
+        icon.setAttribute('data-lucide', 'menu');
+    }
+    lucide.createIcons();
 };
 
-// Evento para el botón del menú
-mobileMenuButton.addEventListener('click', toggleMenu);
+mobileMenuButton.addEventListener('click', toggleIcon);
 
-// Evento para cerrar el menú al hacer clic en un enlace
+
+// --- Cerrar menú móvil de Bootstrap al hacer clic en un enlace ---
+const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+const mainNav = document.getElementById('main-nav');
+
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
-        if (mobileMenu.classList.contains('is-open')) {
-            toggleMenu();
+        // Solo si el menú está visible (en modo móvil)
+        if (mainNav.classList.contains('show')) {
+            const bsCollapse = new bootstrap.Collapse(mainNav, {
+                toggle: false
+            });
+            bsCollapse.hide();
         }
     });
 });
-
-// --- Inicialización de Lucide Icons ---
-// Esta llamada ya está en el HTML, pero la dejamos aquí por si se necesita en el futuro.
-// lucide.createIcons();

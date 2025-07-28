@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="es" class="scroll-smooth">
+<html lang="es" data-bs-spy="scroll" data-bs-target="#navbar-main">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>David A. Chentes - Desarrollador Web Freelance</title>
     <meta name="description" content="Portafolio de David A. Chentes, desarrollador web freelance especializado en crear soluciones digitales modernas y atractivas." />
 
-    <!-- Tailwind CSS -->
-    <script src="assets/js/tailwind.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <!-- Google Fonts (Poppins & Sora) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,97 +20,96 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
 
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              'sans': ['Poppins', 'sans-serif'],
-              'display': ['Sora', 'sans-serif'],
-            },
-            colors: {
-               'dark-text': '#1A1A1A',
-               'gray-text': '#666666',
-            }
-          }
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
         }
-      }
-    </script>
+        .font-display {
+            font-family: 'Sora', sans-serif;
+        }
+        .text-sky-400 {
+            color: #38bdf8;
+        }
+        .text-white-80 {
+            color: rgba(255, 255, 255, 0.8);
+        }
+         .text-white-70 {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .text-white-60 {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        .nav-link {
+             color: rgba(255, 255, 255, 0.8);
+        }
+        .nav-link:hover, .nav-link.active {
+            color: rgba(255, 255, 255, 1);
+        }
+        .hover-scale {
+            transition: transform 0.3s ease-in-out;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
-<body class="bg-slate-900 text-gray-text font-sans">
+<body class="bg-dark">
 
     <!-- Preloader -->
     <div id="preloader">
         <svg class="preloader-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <!-- Helmet -->
             <circle cx="12" cy="10" r="7"></circle>
-            <!-- Body -->
             <path d="M12 17a5 5 0 0 0-5 5h10a5 5 0 0 0-5-5z"></path>
-            <!-- Arms and Legs -->
             <path d="M5 14.5l-1.5 4.5"></path>
             <path d="M19 14.5l1.5 4.5"></path>
-            <!-- Visor Reflection -->
             <path d="M9.5 8a4 4 0 0 1 5 0"></path>
         </svg>
     </div>
 
     <!-- Header & Navbar -->
-    <header id="header" class="fixed top-0 left-0 w-full z-50">
-        <nav id="navbar">
-            <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-                <a href="#" class="font-display text-2xl font-bold text-white">DavidChentes</a>
-                <ul class="hidden md:flex items-center space-x-6">
-                    <li><a href="#home" class="text-white/80 hover:text-white transition-colors duration-300">Inicio</a></li>
-                    <li><a href="#about" class="text-white/80 hover:text-white transition-colors duration-300">Sobre mí</a></li>
-                    <li><a href="#services" class="text-white/80 hover:text-white transition-colors duration-300">Servicios</a></li>
-                    <li><a href="#portfolio" class="text-white/80 hover:text-white transition-colors duration-300">Portafolio</a></li>
-                    <li><a href="#stack" class="text-white/80 hover:text-white transition-colors duration-300">Tecnologías</a></li>
-                    <li><a href="#testimonials" class="text-white/80 hover:text-white transition-colors duration-300">Testimonios</a></li>
-                    <li><a href="#process" class="text-white/80 hover:text-white transition-colors duration-300">Proceso</a></li>
-                    <li><a href="#contact" class="text-white/80 hover:text-white transition-colors duration-300">Contacto</a></li>
-                </ul>
-                <button id="mobile-menu-button" class="md:hidden text-white">
-                    <i data-lucide="menu"></i>
+    <header id="header" class="fixed-top">
+        <nav id="navbar" class="navbar navbar-expand-md navbar-dark">
+            <div class="container">
+                <a href="#" class="navbar-brand font-display fw-bold fs-4">DavidChentes</a>
+                <button id="mobile-menu-button" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                     <i data-lucide="menu" class="text-white"></i>
                 </button>
+                <div class="collapse navbar-collapse" id="main-nav">
+                    <ul class="navbar-nav ms-auto" id="navbar-main">
+                        <li class="nav-item"><a href="#home" class="nav-link">Inicio</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link">Sobre mí</a></li>
+                        <li class="nav-item"><a href="#services" class="nav-link">Servicios</a></li>
+                        <li class="nav-item"><a href="#portfolio" class="nav-link">Portafolio</a></li>
+                        <li class="nav-item"><a href="#stack" class="nav-link">Tecnologías</a></li>
+                        <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonios</a></li>
+                        <li class="nav-item"><a href="#process" class="nav-link">Proceso</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link">Contacto</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
 
-    <!-- Mobile Menu (Controlled by JS) -->
-    <div id="mobile-menu" class="mobile-menu-container fixed inset-0 z-40 flex items-center justify-center">
-        <ul class="flex flex-col items-center text-center space-y-8">
-            <li><a href="#home" class="text-white text-3xl font-display hover:text-sky-400 transition-colors duration-300">Inicio</a></li>
-            <li><a href="#about" class="text-white text-3xl font-display hover:text-sky-400 transition-colors duration-300">Sobre mí</a></li>
-            <li><a href="#services" class="text-white text-3xl font-display hover:text-sky-400 transition-colors duration-300">Servicios</a></li>
-            <li><a href="#portfolio" class="text-white text-3xl font-display hover:text-sky-400 transition-colors duration-300">Portafolio</a></li>
-            <li><a href="#stack" class="text-white text-3xl font-display hover:text-sky-400 transition-colors duration-300">Tecnologías</a></li>
-            <li><a href="#testimonials" class="text-white text-3xl font-display hover:text-sky-400 transition-colors duration-300">Testimonios</a></li>
-            <li><a href="#process" class="text-white text-3xl font-display hover:text-sky-400 transition-colors duration-300">Proceso</a></li>
-            <li><a href="#contact" class="text-white text-3xl font-display hover:text-sky-400 transition-colors duration-300">Contacto</a></li>
-        </ul>
-    </div>
-
-
     <main>
         <!-- Section 1: Hero -->
-        <section id="home" class="min-h-screen flex items-center">
-            <div class="container mx-auto px-6">
-                <div class="max-w-3xl text-center md:text-left">
-                    <p class="text-sky-400 font-semibold" data-aos="fade-up">Hola, mi nombre es</p>
-                    <h1 class="text-5xl md:text-7xl font-display font-bold text-white mt-2" data-aos="fade-up" data-aos-delay="100">
+        <section id="home" class="min-vh-100 d-flex align-items-center">
+            <div class="container">
+                <div class="text-center text-md-start" style="max-width: 54rem;">
+                    <p class="text-sky-400 fw-semibold" data-aos="fade-up">Hola, mi nombre es</p>
+                    <h1 class="display-2 font-display fw-bold text-white mt-2" data-aos="fade-up" data-aos-delay="100">
                         David A. Chentes
                     </h1>
-                    <p class="text-2xl md:text-3xl font-display font-semibold text-white/70 mt-4" data-aos="fade-up" data-aos-delay="200">
+                    <p class="display-6 fw-semibold text-white-70 mt-4" data-aos="fade-up" data-aos-delay="200">
                         Ingeniero de Software y Desarrollador Web
                     </p>
-                    <p class="mt-6 max-w-xl text-white/80" data-aos="fade-up" data-aos-delay="300">
+                    <p class="mt-4 text-white-80" style="max-width: 42rem;" data-aos="fade-up" data-aos-delay="300">
                         Convierto ideas en soluciones de software robustas y atractivas. Como desarrollador freelance, me especializo en crear experiencias web a medida que impulsan resultados.
                     </p>
-                    <div class="mt-8 flex justify-center md:justify-start gap-4" data-aos="fade-up" data-aos-delay="400">
-                        <a href="#portfolio" class="px-8 py-3 bg-sky-500 text-white font-semibold rounded-lg hover:bg-sky-600 transition-all duration-300 transform hover:scale-105">
+                    <div class="mt-4 d-flex justify-content-center justify-content-md-start gap-3" data-aos="fade-up" data-aos-delay="400">
+                        <a href="#portfolio" class="btn btn-info text-white fw-semibold px-4 py-2 hover-scale">
                             Proyectos
                         </a>
-                        <a href="#contact" class="px-8 py-3 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+                        <a href="#contact" class="btn bg-white bg-opacity-10 text-white fw-semibold border border-white border-opacity-25 px-4 py-2 hover-scale">
                             Contáctame
                         </a>
                     </div>
@@ -119,32 +118,32 @@
         </section>
 
         <!-- Section 2: About Me -->
-        <section id="about" class="py-20">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-display font-bold text-center text-white mb-12">Sobre Mí</h2>
-                <div class="grid md:grid-cols-5 gap-10 items-center">
-                    <div class="md:col-span-3" data-aos="fade-up">
-                        <h3 class="text-3xl font-display font-bold text-white">Mi trayectoria</h3>
-                        <p class="text-white/80 mt-4">
+        <section id="about" class="py-5">
+            <div class="container">
+                <h2 class="display-4 font-display fw-bold text-center text-white mb-5">Sobre Mí</h2>
+                <div class="row align-items-center g-5">
+                    <div class="col-md-7" data-aos="fade-up">
+                        <h3 class="display-5 font-display fw-bold text-white">Mi trayectoria</h3>
+                        <p class="text-white-80 mt-4">
                             Como Ingeniero de Software, me especializo en el desarrollo de soluciones a medida, con un fuerte enfoque en la funcionalidad y la experiencia del usuario. Mi experiencia abarca desde la gestión remota de sistemas de adquisición de datos hasta la creación de ecosistemas de software para logística y mantenimiento.
                         </p>
-                        <p class="text-white/80 mt-4">
+                        <p class="text-white-80 mt-4">
                            He tenido el honor de ser ponente en convenciones científicas y publicar artículos, lo que refleja mi compromiso con la innovación. Como miembro oficial de Ubuntu en Latinoamérica, contribuyo activamente a la comunidad de software libre, una pasión que complementa mi trabajo profesional.
                         </p>
-                         <a href="assets/pdf/Curriculum Profesional David A. Chentes.pdf" download="Curriculum Profesional David A. Chentes.pdf" class="inline-block mt-6 px-6 py-3 text-white font-semibold rounded-lg bg-white/10 border border-white/20 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+                         <a href="assets/pdf/Curriculum Profesional David A. Chentes.pdf" download="Curriculum Profesional David A. Chentes.pdf" class="btn bg-white bg-opacity-10 text-white fw-semibold border border-white border-opacity-25 mt-4 px-4 py-2 hover-scale">
                             Descargar CV
                         </a>
                     </div>
-                    <div class="md:col-span-2" data-aos="fade-up" data-aos-delay="200">
-                        <div class="glass-card p-8">
-                            <img src="assets/img/mi_imagen.webp" alt="David A. Chentes" class="rounded-full mx-auto w-40 h-40 object-cover border-4 border-white/20 shadow-lg">
-                            <h4 class="text-center text-2xl font-bold font-display text-white mt-4">David A. Chentes</h4>
-                            <p class="text-center text-white/70 mt-1">Ing. de Software</p>
-                            <div class="flex justify-center gap-4 mt-4">
-                                <a href="https://github.com/davidalejandrochentes" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-white" aria-label="Perfil de GitHub"><i data-lucide="github"></i></a>
-                                <a href="http://linkedin.com/in/david-alejandro-chentes-ramos" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-white" aria-label="Perfil de LinkedIn"><i data-lucide="linkedin"></i></a>
-                                <a href="https://wa.me/5354214040" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-white" aria-label="Contactar por WhatsApp"><i data-lucide="message-circle-more"></i></a>
-                                <a href="mailto:davidalejandrochentes@gmail.com" class="text-white/80 hover:text-white" aria-label="Enviar correo"><i data-lucide="mail"></i></a>
+                    <div class="col-md-5" data-aos="fade-up" data-aos-delay="200">
+                        <div class="glass-card p-5">
+                            <img src="assets/img/mi_imagen.webp" alt="David A. Chentes" class="rounded-circle mx-auto d-block border border-4 border-white border-opacity-25 shadow-lg" style="width: 160px; height: 160px; object-fit: cover;">
+                            <h4 class="text-center fs-3 font-display fw-bold text-white mt-4">David A. Chentes</h4>
+                            <p class="text-center text-white-70 mt-1">Ing. de Software</p>
+                            <div class="d-flex justify-content-center gap-4 mt-4">
+                                <a href="https://github.com/davidalejandrochentes" target="_blank" rel="noopener noreferrer" class="text-white-80" aria-label="Perfil de GitHub"><i data-lucide="github"></i></a>
+                                <a href="http://linkedin.com/in/david-alejandro-chentes-ramos" target="_blank" rel="noopener noreferrer" class="text-white-80" aria-label="Perfil de LinkedIn"><i data-lucide="linkedin"></i></a>
+                                <a href="https://wa.me/5354214040" target="_blank" rel="noopener noreferrer" class="text-white-80" aria-label="Contactar por WhatsApp"><i data-lucide="message-circle-more"></i></a>
+                                <a href="mailto:davidalejandrochentes@gmail.com" class="text-white-80" aria-label="Enviar correo"><i data-lucide="mail"></i></a>
                             </div>
                         </div>
                     </div>
@@ -153,221 +152,211 @@
         </section>
 
         <!-- Section 3: Services -->
-        <section id="services" class="py-20">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-display font-bold text-center text-white mb-12">Qué te puedo aportar</h2>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Service Card 1: Backend y Datos -->
-                    <div class="glass-card p-8 text-center" data-aos="fade-up">
-                        <div class="flex justify-center mb-4">
-                            <div class="w-16 h-16 bg-slate-900/50 rounded-full flex items-center justify-center">
-                                <i data-lucide="server" class="w-8 h-8 text-sky-400"></i>
+        <section id="services" class="py-5">
+            <div class="container">
+                <h2 class="display-4 font-display fw-bold text-center text-white mb-5">Qué te puedo aportar</h2>
+                <div class="row g-4">
+                    <div class="col-md-4" data-aos="fade-up">
+                        <div class="glass-card p-5 text-center h-100">
+                            <div class="d-flex justify-content-center mb-4">
+                                <div class="bg-dark bg-opacity-50 rounded-circle d-flex align-items-center justify-content-center" style="width: 64px; height: 64px;">
+                                    <i data-lucide="server" class="text-sky-400" style="width: 32px; height: 32px;"></i>
+                                </div>
                             </div>
+                            <h3 class="fs-4 font-display fw-bold text-white">Desarrollo Backend y Datos</h3>
+                            <p class="text-white-70 mt-2">
+                                Construcción de APIs robustas con Django y FastAPI, y optimización de bases de datos SQL para garantizar sistemas de gestión de datos eficientes y seguros.
+                            </p>
                         </div>
-                        <h3 class="text-2xl font-display font-bold text-white">Desarrollo Backend y Datos</h3>
-                        <p class="text-white/70 mt-2">
-                            Construcción de APIs robustas con Django y FastAPI, y optimización de bases de datos SQL para garantizar sistemas de gestión de datos eficientes y seguros.
-                        </p>
                     </div>
-
-                    <!-- Service Card 2: Seguridad y Optimización -->
-                    <div class="glass-card p-8 text-center" data-aos="fade-up" data-aos-delay="150">
-                        <div class="flex justify-center mb-4">
-                            <div class="w-16 h-16 bg-slate-900/50 rounded-full flex items-center justify-center">
-                                <i data-lucide="shield-check" class="w-8 h-8 text-sky-400"></i>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+                        <div class="glass-card p-5 text-center h-100">
+                            <div class="d-flex justify-content-center mb-4">
+                                <div class="bg-dark bg-opacity-50 rounded-circle d-flex align-items-center justify-content-center" style="width: 64px; height: 64px;">
+                                    <i data-lucide="shield-check" class="text-sky-400" style="width: 32px; height: 32px;"></i>
+                                </div>
                             </div>
+                            <h3 class="fs-4 font-display fw-bold text-white">Seguridad y Optimización</h3>
+                            <p class="text-white-70 mt-2">
+                                Aplico las mejores prácticas para proteger tus aplicaciones y optimizo el rendimiento para mejorar la velocidad, escalabilidad y capacidad de respuesta.
+                            </p>
                         </div>
-                        <h3 class="text-2xl font-display font-bold text-white">Seguridad y Optimización</h3>
-                        <p class="text-white/70 mt-2">
-                            Aplico las mejores prácticas para proteger tus aplicaciones y optimizo el rendimiento para mejorar la velocidad, escalabilidad y capacidad de respuesta.
-                        </p>
                     </div>
-
-                    <!-- Service Card 3: Gestión de Proyectos -->
-                    <div class="glass-card p-8 text-center" data-aos="fade-up" data-aos-delay="300">
-                        <div class="flex justify-center mb-4">
-                            <div class="w-16 h-16 bg-slate-900/50 rounded-full flex items-center justify-center">
-                                <i data-lucide="git-branch" class="w-8 h-8 text-sky-400"></i>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="glass-card p-5 text-center h-100">
+                            <div class="d-flex justify-content-center mb-4">
+                                <div class="bg-dark bg-opacity-50 rounded-circle d-flex align-items-center justify-content-center" style="width: 64px; height: 64px;">
+                                    <i data-lucide="git-branch" class="text-sky-400" style="width: 32px; height: 32px;"></i>
+                                </div>
                             </div>
+                            <h3 class="fs-4 font-display fw-bold text-white">Gestión de Proyectos</h3>
+                            <p class="text-white-70 mt-2">
+                                Uso eficiente de Git/GitHub para el control de versiones y dominio de herramientas como VS Code para maximizar la productividad y la calidad del código.
+                            </p>
                         </div>
-                        <h3 class="text-2xl font-display font-bold text-white">Gestión de Proyectos y Herramientas</h3>
-                        <p class="text-white/70 mt-2">
-                            Uso eficiente de Git/GitHub para el control de versiones y dominio de herramientas como VS Code para maximizar la productividad y la calidad del código.
-                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Section 4: Portfolio -->
-        <section id="portfolio" class="py-20">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-display font-bold text-center text-white mb-12">Proyectos Destacados</h2>
-                <div class="grid md:grid-cols-2 gap-10">
-
-                    <!-- Project: Tentador -->
-                    <div class="glass-card overflow-hidden" data-aos="fade-up">
-                        <img src="assets/img/tentador.webp" alt="Proyecto Tentador" class="w-full h-60 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-display font-bold text-white">Tentador - Gestión de Pedidos</h3>
-                            <p class="text-white/70 mt-2">
-                                Solución full-stack para restaurantes que digitaliza la experiencia de servicio con menús dinámicos, carrito de compras y seguimiento en tiempo real.
-                            </p>
-                            <div class="mt-6 flex gap-4">
-                                <a href="https://tentador.pythonanywhere.com/" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-white flex items-center gap-2"><i data-lucide="external-link"></i> Demo</a>
-                                <a href="#" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-white flex items-center gap-2"><i data-lucide="github"></i> Código</a>
+        <section id="portfolio" class="py-5">
+            <div class="container">
+                <h2 class="display-4 font-display fw-bold text-center text-white mb-5">Proyectos Destacados</h2>
+                <div class="row g-5">
+                    <div class="col-md-6" data-aos="fade-up">
+                        <div class="glass-card overflow-hidden h-100">
+                            <img src="assets/img/tentador.webp" alt="Proyecto Tentador" class="img-fluid" style="height: 240px; width: 100%; object-fit: cover;">
+                            <div class="p-4">
+                                <h3 class="fs-4 font-display fw-bold text-white">Tentador - Gestión de Pedidos</h3>
+                                <p class="text-white-70 mt-2">
+                                    Solución full-stack para restaurantes que digitaliza la experiencia de servicio con menús dinámicos, carrito de compras y seguimiento en tiempo real.
+                                </p>
+                                <div class="mt-4 d-flex gap-4">
+                                    <a href="https://tentador.pythonanywhere.com/" target="_blank" rel="noopener noreferrer" class="text-white-80 d-flex align-items-center gap-2 text-decoration-none"><i data-lucide="external-link"></i> Demo</a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-white-80 d-flex align-items-center gap-2 text-decoration-none"><i data-lucide="github"></i> Código</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Project: sUP -->
-                    <div class="glass-card overflow-hidden" data-aos="fade-up" data-aos-delay="150">
-                        <img src="assets/img/sUP.webp" alt="Proyecto sUP" class="w-full h-60 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-display font-bold text-white">sUP - Gestión Empresarial</h3>
-                            <p class="text-white/70 mt-2">
-                                Arquitectura modular que centraliza clientes, proveedores, inventario y ventas para simplificar la gestión de pequeños negocios.
-                            </p>
-                            <div class="mt-6 flex gap-4">
-                                <a href="https://sup.upso-agency.workers.dev" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-white flex items-center gap-2"><i data-lucide="external-link"></i> Demo</a>
-                                <a href="#" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-white flex items-center gap-2"><i data-lucide="github"></i> Código</a>
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
+                        <div class="glass-card overflow-hidden h-100">
+                            <img src="assets/img/sUP.webp" alt="Proyecto sUP" class="img-fluid" style="height: 240px; width: 100%; object-fit: cover;">
+                            <div class="p-4">
+                                <h3 class="fs-4 font-display fw-bold text-white">sUP - Gestión Empresarial</h3>
+                                <p class="text-white-70 mt-2">
+                                    Arquitectura modular que centraliza clientes, proveedores, inventario y ventas para simplificar la gestión de pequeños negocios.
+                                </p>
+                                <div class="mt-4 d-flex gap-4">
+                                    <a href="https://sup.upso-agency.workers.dev" target="_blank" rel="noopener noreferrer" class="text-white-80 d-flex align-items-center gap-2 text-decoration-none"><i data-lucide="external-link"></i> Demo</a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-white-80 d-flex align-items-center gap-2 text-decoration-none"><i data-lucide="github"></i> Código</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Project: SocialAPI -->
-                    <div class="glass-card overflow-hidden" data-aos="fade-up" data-aos-delay="300">
-                        <img src="image/SocialAPI/1.webp" alt="Proyecto SocialAPI" class="w-full h-60 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-display font-bold text-white">SocialAPI - Backend para Red Social</h3>
-                            <p class="text-white/70 mt-2">
-                                API RESTful que provee la lógica de backend para una red social tipo Instagram, incluyendo perfiles, posts, seguidores y feeds de contenido.
-                            </p>
-                            <div class="mt-6 flex gap-4">
-                                <a href="#" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-white flex items-center gap-2"><i data-lucide="external-link"></i> Demo</a>
-                                <a href="#" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-white flex items-center gap-2"><i data-lucide="github"></i> Código</a>
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="glass-card overflow-hidden h-100">
+                            <img src="image/SocialAPI/1.webp" alt="Proyecto SocialAPI" class="img-fluid" style="height: 240px; width: 100%; object-fit: cover;">
+                            <div class="p-4">
+                                <h3 class="fs-4 font-display fw-bold text-white">SocialAPI - Backend para Red Social</h3>
+                                <p class="text-white-70 mt-2">
+                                    API RESTful que provee la lógica de backend para una red social tipo Instagram, incluyendo perfiles, posts, seguidores y feeds de contenido.
+                                </p>
+                                <div class="mt-4 d-flex gap-4">
+                                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-white-80 d-flex align-items-center gap-2 text-decoration-none"><i data-lucide="external-link"></i> Demo</a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-white-80 d-flex align-items-center gap-2 text-decoration-none"><i data-lucide="github"></i> Código</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Project: Barbería Digital -->
-                    <div class="glass-card overflow-hidden" data-aos="fade-up" data-aos-delay="450">
-                        <img src="image/Barberia/1.webp" alt="Proyecto Barbería Digital" class="w-full h-60 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-display font-bold text-white">Barbería Digital - Gestión de Citas</h3>
-                            <p class="text-white/70 mt-2">
-                                Plataforma para barberías que permite a clientes agendar citas y a dueños gestionar horarios, barberos y servicios para optimizar la operación.
-                            </p>
-                            <div class="mt-6 flex gap-4">
-                                <a href="#" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-white flex items-center gap-2"><i data-lucide="external-link"></i> Demo</a>
-                                <a href="#" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-white flex items-center gap-2"><i data-lucide="github"></i> Código</a>
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="450">
+                        <div class="glass-card overflow-hidden h-100">
+                            <img src="image/Barberia/1.webp" alt="Proyecto Barbería Digital" class="img-fluid" style="height: 240px; width: 100%; object-fit: cover;">
+                            <div class="p-4">
+                                <h3 class="fs-4 font-display fw-bold text-white">Barbería Digital - Gestión de Citas</h3>
+                                <p class="text-white-70 mt-2">
+                                    Plataforma para barberías que permite a clientes agendar citas y a dueños gestionar horarios, barberos y servicios para optimizar la operación.
+                                </p>
+                                <div class="mt-4 d-flex gap-4">
+                                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-white-80 d-flex align-items-center gap-2 text-decoration-none"><i data-lucide="external-link"></i> Demo</a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-white-80 d-flex align-items-center gap-2 text-decoration-none"><i data-lucide="github"></i> Código</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Project: mUP -->
-                    <div class="glass-card overflow-hidden" data-aos="fade-up" data-aos-delay="600">
-                        <img src="assets/img/mUP.webp" alt="Proyecto mUP" class="w-full h-60 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-display font-bold text-white">mUP - Mantenimiento Industrial</h3>
-                            <p class="text-white/70 mt-2">
-                                Sistema de notificaciones en tiempo real y generación de informes para la gestión de mantenimiento industrial, desarrollado para Innovaplast del Ecuador.
-                            </p>
-                            <div class="mt-6 flex gap-4">
-                                <a href="#" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-white flex items-center gap-2"><i data-lucide="external-link"></i> Demo</a>
-                                <a href="https://github.com/davidalejandrochentes/DJ-mUP.git" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-white flex items-center gap-2"><i data-lucide="github"></i> Código</a>
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
+                        <div class="glass-card overflow-hidden h-100">
+                            <img src="assets/img/mUP.webp" alt="Proyecto mUP" class="img-fluid" style="height: 240px; width: 100%; object-fit: cover;">
+                            <div class="p-4">
+                                <h3 class="fs-4 font-display fw-bold text-white">mUP - Mantenimiento Industrial</h3>
+                                <p class="text-white-70 mt-2">
+                                    Sistema de notificaciones en tiempo real y generación de informes para la gestión de mantenimiento industrial, desarrollado para Innovaplast del Ecuador.
+                                </p>
+                                <div class="mt-4 d-flex gap-4">
+                                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-white-80 d-flex align-items-center gap-2 text-decoration-none"><i data-lucide="external-link"></i> Demo</a>
+                                    <a href="https://github.com/davidalejandrochentes/DJ-mUP.git" target="_blank" rel="noopener noreferrer" class="text-white-80 d-flex align-items-center gap-2 text-decoration-none"><i data-lucide="github"></i> Código</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Project: Vibrosoft -->
-                    <div class="glass-card overflow-hidden" data-aos="fade-up" data-aos-delay="750">
-                        <img src="assets/img/vibrosoft.webp" alt="Proyecto Vibrosoft" class="w-full h-60 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-display font-bold text-white">Vibrosoft - Adquisición de Datos</h3>
-                            <p class="text-white/70 mt-2">
-                                Software para el grupo GAPS de la CUJAE con gestión de usuarios avanzada para la comunicación y monitoreo de dispositivos de adquisición de datos.
-                            </p>
-                            <div class="mt-6 flex gap-4">
-                                <a href="#" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-white flex items-center gap-2"><i data-lucide="external-link"></i> Demo</a>
-                                <a href="https://github.com/davidalejandrochentes/DJ-DRF-vibrosoft.git" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-white flex items-center gap-2"><i data-lucide="github"></i> Código</a>
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="750">
+                        <div class="glass-card overflow-hidden h-100">
+                            <img src="assets/img/vibrosoft.webp" alt="Proyecto Vibrosoft" class="img-fluid" style="height: 240px; width: 100%; object-fit: cover;">
+                            <div class="p-4">
+                                <h3 class="fs-4 font-display fw-bold text-white">Vibrosoft - Adquisición de Datos</h3>
+                                <p class="text-white-70 mt-2">
+                                    Software para el grupo GAPS de la CUJAE con gestión de usuarios avanzada para la comunicación y monitoreo de dispositivos de adquisición de datos.
+                                </p>
+                                <div class="mt-4 d-flex gap-4">
+                                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-white-80 d-flex align-items-center gap-2 text-decoration-none"><i data-lucide="external-link"></i> Demo</a>
+                                    <a href="https://github.com/davidalejandrochentes/DJ-DRF-vibrosoft.git" target="_blank" rel="noopener noreferrer" class="text-white-80 d-flex align-items-center gap-2 text-decoration-none"><i data-lucide="github"></i> Código</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
 
         <!-- Section 5: Tech Stack -->
-        <section id="stack" class="py-20">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-display font-bold text-center text-white mb-12">Tecnologías y Herramientas</h2>
-                <div class="max-w-6xl mx-auto">
-                    <div class="flex flex-wrap justify-center gap-6 md:gap-8">
-                        
-
-                        <div class="text-center" data-aos="fade-up" data-aos-delay="0"><div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl inline-block hover:bg-white/20 transition-colors duration-300"><img src="assets/svg/python-original.svg" class="w-16 h-16" alt="Python" /></div><p class="text-white/80 mt-2">Python</p></div>
-                        <div class="text-center" data-aos="fade-up" data-aos-delay="150"><div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl inline-block hover:bg-white/20 transition-colors duration-300"><img src="assets/svg/django-plain.svg" class="w-16 h-16" alt="Django" /></div><p class="text-white/80 mt-2">Django</p></div>
-                        <div class="text-center" data-aos="fade-up" data-aos-delay="200"><div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl inline-block hover:bg-white/20 transition-colors duration-300"><img src="assets/svg/fastapi-original.svg" class="w-16 h-16" alt="FastAPI" /></div><p class="text-white/80 mt-2">FastAPI</p></div>
-                        <div class="text-center" data-aos="fade-up" data-aos-delay="350"><div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl inline-block hover:bg-white/20 transition-colors duration-300"><img src="assets/svg/reflex.png" class="w-16 h-16" alt="Reflex" /></div><p class="text-white/80 mt-2">Reflex</p></div>
-                        <div class="text-center" data-aos="fade-up" data-aos-delay="400"><div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl inline-block hover:bg-white/20 transition-colors duration-300"><img src="assets/svg/streamlit-plain.svg" class="w-16 h-16" alt="Streamlit" /></div><p class="text-white/80 mt-2">Streamlit</p></div>
-
-                        <div class="text-center" data-aos="fade-up" data-aos-delay="50"><div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl inline-block hover:bg-white/20 transition-colors duration-300"><img src="assets/svg/Go.svg" class="w-16 h-16" alt="Go" /></div><p class="text-white/80 mt-2">Go</p></div>
-                        <div class="text-center" data-aos="fade-up" data-aos-delay="250"><div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl inline-block hover:bg-white/20 transition-colors duration-300"><img src="assets/svg/gin.png" class="w-16 h-16" alt="Gin" /></div><p class="text-white/80 mt-2">Gin (Go)</p></div>
-
-                        <div class="text-center" data-aos="fade-up" data-aos-delay="100"><div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl inline-block hover:bg-white/20 transition-colors duration-300"><img src="assets/svg/rust-original.svg" class="w-16 h-16" alt="Rust" /></div><p class="text-white/80 mt-2">Rust</p></div>
-                        <div class="text-center" data-aos="fade-up" data-aos-delay="300"><div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl inline-block hover:bg-white/20 transition-colors duration-300"><img src="assets/svg/actix.png" class="w-16 h-16" alt="Actix Web" /></div><p class="text-white/80 mt-2">Actix Web (Rust)</p></div>
-
-
-                        <!-- Frontend -->
-                        <div class="text-center" data-aos="fade-up" data-aos-delay="450"><div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl inline-block hover:bg-white/20 transition-colors duration-300"><img src="assets/svg/html5-original.svg" class="w-16 h-16" alt="HTML5" /></div><p class="text-white/80 mt-2">HTML5</p></div>
-                        <div class="text-center" data-aos="fade-up" data-aos-delay="500"><div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl inline-block hover:bg-white/20 transition-colors duration-300"><img src="assets/svg/css3-original.svg" class="w-16 h-16" alt="CSS3" /></div><p class="text-white/80 mt-2">CSS3</p></div>
-                        <div class="text-center" data-aos="fade-up" data-aos-delay="550"><div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl inline-block hover:bg-white/20 transition-colors duration-300"><img src="assets/svg/tailwindcss-original.svg" class="w-16 h-16" alt="Tailwind CSS" /></div><p class="text-white/80 mt-2">Tailwind CSS</p></div>
-                        <div class="text-center" data-aos="fade-up" data-aos-delay="600"><div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl inline-block hover:bg-white/20 transition-colors duration-300"><img src="assets/svg/bootstrap-original.svg" class="w-16 h-16" alt="Bootstrap" /></div><p class="text-white/80 mt-2">Bootstrap</p></div>
-
-                        <!-- Herramientas y Otros -->
-                        <div class="text-center" data-aos="fade-up" data-aos-delay="650"><div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl inline-block hover:bg-white/20 transition-colors duration-300"><img src="assets/svg/postgresql-original.svg" class="w-16 h-16" alt="PostgreSQL" /></div><p class="text-white/80 mt-2">PostgreSQL</p></div>
-                        <div class="text-center" data-aos="fade-up" data-aos-delay="700"><div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl inline-block hover:bg-white/20 transition-colors duration-300"><img src="assets/svg/mysql-original.svg" class="w-16 h-16" alt="MySQL" /></div><p class="text-white/80 mt-2">MySQL</p></div>
-                        <div class="text-center" data-aos="fade-up" data-aos-delay="750"><div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl inline-block hover:bg-white/20 transition-colors duration-300"><img src="assets/svg/mongodb-original.svg" class="w-16 h-16" alt="MongoDB" /></div><p class="text-white/80 mt-2">MongoDB</p></div>
-                        <div class="text-center" data-aos="fade-up" data-aos-delay="800"><div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl inline-block hover:bg-white/20 transition-colors duration-300"><img src="assets/svg/docker-original.svg" class="w-16 h-16" alt="Docker" /></div><p class="text-white/80 mt-2">Docker</p></div>
-                        <div class="text-center" data-aos="fade-up" data-aos-delay="850"><div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl inline-block hover:bg-white/20 transition-colors duration-300"><img src="assets/svg/git-original.svg" class="w-16 h-16" alt="Git" /></div><p class="text-white/80 mt-2">Git</p></div>
-                        <div class="text-center" data-aos="fade-up" data-aos-delay="900"><div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl inline-block hover:bg-white/20 transition-colors duration-300"><img src="assets/svg/github-original.svg" class="w-16 h-16" alt="GitHub" /></div><p class="text-white/80 mt-2">GitHub</p></div>
-                        <div class="text-center" data-aos="fade-up" data-aos-delay="950"><div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl inline-block hover:bg-white/20 transition-colors duration-300"><img src="assets/svg/vscode-original.svg" class="w-16 h-16" alt="VS Code" /></div><p class="text-white/80 mt-2">VS Code</p></div>
-                        <div class="text-center" data-aos="fade-up" data-aos-delay="1000"><div class="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl inline-block hover:bg-white/20 transition-colors duration-300"><img src="assets/svg/wordpress-original.svg" class="w-16 h-16" alt="WordPress" /></div><p class="text-white/80 mt-2">WordPress</p></div>
-
-                    </div>
+        <section id="stack" class="py-5">
+            <div class="container">
+                <h2 class="display-4 font-display fw-bold text-center text-white mb-5">Tecnologías y Herramientas</h2>
+                <div class="d-flex flex-wrap justify-content-center align-items-center" style="gap: 2.5rem;">
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="0"><div class="bg-white bg-opacity-10 border border-white border-opacity-25 p-4 rounded-4 d-inline-block"><img src="assets/svg/python-original.svg" style="width: 64px; height: 64px;" alt="Python" /></div><p class="text-white-80 mt-2">Python</p></div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="150"><div class="bg-white bg-opacity-10 border border-white border-opacity-25 p-4 rounded-4 d-inline-block"><img src="assets/svg/django-plain.svg" style="width: 64px; height: 64px;" alt="Django" /></div><p class="text-white-80 mt-2">Django</p></div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="200"><div class="bg-white bg-opacity-10 border border-white border-opacity-25 p-4 rounded-4 d-inline-block"><img src="assets/svg/fastapi-original.svg" style="width: 64px; height: 64px;" alt="FastAPI" /></div><p class="text-white-80 mt-2">FastAPI</p></div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="350"><div class="bg-white bg-opacity-10 border border-white border-opacity-25 p-4 rounded-4 d-inline-block"><img src="assets/svg/reflex.png" style="width: 64px; height: 64px;" alt="Reflex" /></div><p class="text-white-80 mt-2">Reflex</p></div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="400"><div class="bg-white bg-opacity-10 border border-white border-opacity-25 p-4 rounded-4 d-inline-block"><img src="assets/svg/streamlit-plain.svg" style="width: 64px; height: 64px;" alt="Streamlit" /></div><p class="text-white-80 mt-2">Streamlit</p></div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="50"><div class="bg-white bg-opacity-10 border border-white border-opacity-25 p-4 rounded-4 d-inline-block"><img src="assets/svg/Go.svg" style="width: 64px; height: 64px;" alt="Go" /></div><p class="text-white-80 mt-2">Go</p></div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="250"><div class="bg-white bg-opacity-10 border border-white border-opacity-25 p-4 rounded-4 d-inline-block"><img src="assets/svg/gin.png" style="width: 64px; height: 64px;" alt="Gin" /></div><p class="text-white-80 mt-2">Gin (Go)</p></div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="100"><div class="bg-white bg-opacity-10 border border-white border-opacity-25 p-4 rounded-4 d-inline-block"><img src="assets/svg/rust-original.svg" style="width: 64px; height: 64px;" alt="Rust" /></div><p class="text-white-80 mt-2">Rust</p></div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="300"><div class="bg-white bg-opacity-10 border border-white border-opacity-25 p-4 rounded-4 d-inline-block"><img src="assets/svg/actix.png" style="width: 64px; height: 64px;" alt="Actix Web" /></div><p class="text-white-80 mt-2">Actix Web</p></div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="450"><div class="bg-white bg-opacity-10 border border-white border-opacity-25 p-4 rounded-4 d-inline-block"><img src="assets/svg/html5-original.svg" style="width: 64px; height: 64px;" alt="HTML5" /></div><p class="text-white-80 mt-2">HTML5</p></div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="500"><div class="bg-white bg-opacity-10 border border-white border-opacity-25 p-4 rounded-4 d-inline-block"><img src="assets/svg/css3-original.svg" style="width: 64px; height: 64px;" alt="CSS3" /></div><p class="text-white-80 mt-2">CSS3</p></div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="550"><div class="bg-white bg-opacity-10 border border-white border-opacity-25 p-4 rounded-4 d-inline-block"><img src="assets/svg/tailwindcss-original.svg" style="width: 64px; height: 64px;" alt="Tailwind CSS" /></div><p class="text-white-80 mt-2">Tailwind CSS</p></div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="600"><div class="bg-white bg-opacity-10 border border-white border-opacity-25 p-4 rounded-4 d-inline-block"><img src="assets/svg/bootstrap-original.svg" style="width: 64px; height: 64px;" alt="Bootstrap" /></div><p class="text-white-80 mt-2">Bootstrap</p></div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="650"><div class="bg-white bg-opacity-10 border border-white border-opacity-25 p-4 rounded-4 d-inline-block"><img src="assets/svg/postgresql-original.svg" style="width: 64px; height: 64px;" alt="PostgreSQL" /></div><p class="text-white-80 mt-2">PostgreSQL</p></div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="700"><div class="bg-white bg-opacity-10 border border-white border-opacity-25 p-4 rounded-4 d-inline-block"><img src="assets/svg/mysql-original.svg" style="width: 64px; height: 64px;" alt="MySQL" /></div><p class="text-white-80 mt-2">MySQL</p></div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="750"><div class="bg-white bg-opacity-10 border border-white border-opacity-25 p-4 rounded-4 d-inline-block"><img src="assets/svg/mongodb-original.svg" style="width: 64px; height: 64px;" alt="MongoDB" /></div><p class="text-white-80 mt-2">MongoDB</p></div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="800"><div class="bg-white bg-opacity-10 border border-white border-opacity-25 p-4 rounded-4 d-inline-block"><img src="assets/svg/docker-original.svg" style="width: 64px; height: 64px;" alt="Docker" /></div><p class="text-white-80 mt-2">Docker</p></div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="850"><div class="bg-white bg-opacity-10 border border-white border-opacity-25 p-4 rounded-4 d-inline-block"><img src="assets/svg/git-original.svg" style="width: 64px; height: 64px;" alt="Git" /></div><p class="text-white-80 mt-2">Git</p></div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="900"><div class="bg-white bg-opacity-10 border border-white border-opacity-25 p-4 rounded-4 d-inline-block"><img src="assets/svg/github-original.svg" style="width: 64px; height: 64px;" alt="GitHub" /></div><p class="text-white-80 mt-2">GitHub</p></div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="950"><div class="bg-white bg-opacity-10 border border-white border-opacity-25 p-4 rounded-4 d-inline-block"><img src="assets/svg/vscode-original.svg" style="width: 64px; height: 64px;" alt="VS Code" /></div><p class="text-white-80 mt-2">VS Code</p></div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="1000"><div class="bg-white bg-opacity-10 border border-white border-opacity-25 p-4 rounded-4 d-inline-block"><img src="assets/svg/wordpress-original.svg" style="width: 64px; height: 64px;" alt="WordPress" /></div><p class="text-white-80 mt-2">WordPress</p></div>
                 </div>
             </div>
         </section>
 
         <!-- Section 6: Testimonials -->
-        <section id="testimonials" class="py-20">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-display font-bold text-center text-white mb-12">Testimonios</h2>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Testimonial 1 -->
-                    <div class="glass-card p-8" data-aos="fade-up">
-                        <i data-lucide="quote" class="w-10 h-10 text-sky-400"></i>
-                        <p class="text-white/80 mt-4">
-                            (Testimonio de ejemplo) - "Trabajar con David ha sido una experiencia excepcional. Su profesionalismo, dedicación y habilidades técnicas para resolver problemas complejos fueron fundamentales para el éxito de nuestro proyecto. Lo recomiendo sin dudarlo."
-                        </p>
-                        <div class="mt-4">
-                            <h4 class="font-bold text-white">Dr. C. Fidel Ernesto Hernández Montero</h4>
-                            <p class="text-sm text-white/60">fhernandez@tele.cujae.edu.cu</p>
-                            <p class="text-sm text-white/60">CUJAE</p>
+        <section id="testimonials" class="py-5">
+            <div class="container">
+                <h2 class="display-4 font-display fw-bold text-center text-white mb-5">Testimonios</h2>
+                <div class="row g-4">
+                    <div class="col-md-6" data-aos="fade-up">
+                        <div class="glass-card p-5 h-100">
+                            <i data-lucide="quote" class="text-sky-400" style="width: 40px; height: 40px;"></i>
+                            <p class="text-white-80 mt-4">
+                                (Testimonio de ejemplo) - "Trabajar con David ha sido una experiencia excepcional. Su profesionalismo, dedicación y habilidades técnicas para resolver problemas complejos fueron fundamentales para el éxito de nuestro proyecto. Lo recomiendo sin dudarlo."
+                            </p>
+                            <div class="mt-4">
+                                <h4 class="fw-bold text-white">Dr. C. Fidel Ernesto Hernández Montero</h4>
+                                <p class="text-sm text-white-60">fhernandez@tele.cujae.edu.cu</p>
+                                <p class="text-sm text-white-60">CUJAE</p>
+                            </div>
                         </div>
                     </div>
-                    <!-- Testimonial 2 -->
-                    <div class="glass-card p-8" data-aos="fade-up" data-aos-delay="150">
-                        <i data-lucide="quote" class="w-10 h-10 text-sky-400"></i>
-                        <p class="text-white/80 mt-4">
-                            (Testimonio de ejemplo) - "La capacidad de David para integrarse en el equipo y aportar soluciones creativas fue impresionante. Es un desarrollador proactivo, comunicativo y con un gran enfoque en la calidad del producto final. Un gran colega."
-                        </p>
-                        <div class="mt-4">
-                            <h4 class="font-bold text-white">Ing. Jorge Luis Blanco Ramos</h4>
-                            <p class="text-sm text-white/60">jorgeluisblanco1970@gmail.com</p>
-                            <p class="text-sm text-white/60">Innovaplast del Ecuador</p>
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
+                        <div class="glass-card p-5 h-100">
+                            <i data-lucide="quote" class="text-sky-400" style="width: 40px; height: 40px;"></i>
+                            <p class="text-white-80 mt-4">
+                                (Testimonio de ejemplo) - "La capacidad de David para integrarse en el equipo y aportar soluciones creativas fue impresionante. Es un desarrollador proactivo, comunicativo y con un gran enfoque en la calidad del producto final. Un gran colega."
+                            </p>
+                            <div class="mt-4">
+                                <h4 class="fw-bold text-white">Ing. Jorge Luis Blanco Ramos</h4>
+                                <p class="text-sm text-white-60">jorgeluisblanco1970@gmail.com</p>
+                                <p class="text-sm text-white-60">Innovaplast del Ecuador</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -375,82 +364,78 @@
         </section>
 
         <!-- Section 7: Work Process -->
-        <section id="process" class="py-20">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-display font-bold text-center text-white mb-12">Mi Proceso de Trabajo</h2>
-                <div class="grid md:grid-cols-4 gap-8 text-center">
-                    <!-- Step 1 -->
-                    <div data-aos="fade-up">
-                        <div class="relative">
-                            <div class="w-24 h-24 glass-card rounded-full flex items-center justify-center mx-auto">
-                                <i data-lucide="search" class="w-12 h-12 text-sky-400"></i>
+        <section id="process" class="py-5">
+            <div class="container">
+                <h2 class="display-4 font-display fw-bold text-center text-white mb-5">Mi Proceso de Trabajo</h2>
+                <div class="row g-4 text-center">
+                    <div class="col-md-3" data-aos="fade-up">
+                        <div class="position-relative">
+                            <div class="glass-card rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 96px; height: 96px;">
+                                <i data-lucide="search" class="text-sky-400" style="width: 48px; height: 48px;"></i>
                             </div>
-                            <span class="absolute top-0 right-1/2 translate-x-12 bg-slate-700 text-white text-xl font-bold w-10 h-10 rounded-full flex items-center justify-center border-4 border-slate-900">1</span>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary border border-light" style="font-size: 1.1rem; width: 2.5rem; height: 2.5rem; line-height: 1.7rem;">1</span>
                         </div>
-                        <h3 class="text-xl font-display font-bold text-white mt-6">Descubrimiento</h3>
-                        <p class="text-white/70 mt-2">Analizamos tus ideas y requisitos para definir el alcance y los objetivos del proyecto.</p>
+                        <h3 class="fs-5 font-display fw-bold text-white mt-4">Descubrimiento</h3>
+                        <p class="text-white-70 mt-2">Analizamos tus ideas y requisitos para definir el alcance y los objetivos del proyecto.</p>
                     </div>
-                    <!-- Step 2 -->
-                    <div data-aos="fade-up" data-aos-delay="150">
-                        <div class="relative">
-                            <div class="w-24 h-24 glass-card rounded-full flex items-center justify-center mx-auto">
-                                <i data-lucide="pencil-ruler" class="w-12 h-12 text-sky-400"></i>
+                    <div class="col-md-3" data-aos="fade-up" data-aos-delay="150">
+                        <div class="position-relative">
+                            <div class="glass-card rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 96px; height: 96px;">
+                                <i data-lucide="pencil-ruler" class="text-sky-400" style="width: 48px; height: 48px;"></i>
                             </div>
-                            <span class="absolute top-0 right-1/2 translate-x-12 bg-slate-700 text-white text-xl font-bold w-10 h-10 rounded-full flex items-center justify-center border-4 border-slate-900">2</span>
+                             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary border border-light" style="font-size: 1.1rem; width: 2.5rem; height: 2.5rem; line-height: 1.7rem;">2</span>
                         </div>
-                        <h3 class="text-xl font-display font-bold text-white mt-6">Diseño y Desarrollo</h3>
-                        <p class="text-white/70 mt-2">Creamos el prototipo y desarrollamos el producto con código limpio y escalable.</p>
+                        <h3 class="fs-5 font-display fw-bold text-white mt-4">Diseño y Desarrollo</h3>
+                        <p class="text-white-70 mt-2">Creamos el prototipo y desarrollamos el producto con código limpio y escalable.</p>
                     </div>
-                    <!-- Step 3 -->
-                    <div data-aos="fade-up" data-aos-delay="300">
-                        <div class="relative">
-                            <div class="w-24 h-24 glass-card rounded-full flex items-center justify-center mx-auto">
-                                <i data-lucide="clipboard-check" class="w-12 h-12 text-sky-400"></i>
+                    <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                        <div class="position-relative">
+                            <div class="glass-card rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 96px; height: 96px;">
+                                <i data-lucide="clipboard-check" class="text-sky-400" style="width: 48px; height: 48px;"></i>
                             </div>
-                            <span class="absolute top-0 right-1/2 translate-x-12 bg-slate-700 text-white text-xl font-bold w-10 h-10 rounded-full flex items-center justify-center border-4 border-slate-900">3</span>
+                             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary border border-light" style="font-size: 1.1rem; width: 2.5rem; height: 2.5rem; line-height: 1.7rem;">3</span>
                         </div>
-                        <h3 class="text-xl font-display font-bold text-white mt-6">Revisiones</h3>
-                        <p class="text-white/70 mt-2">Iteramos sobre el desarrollo, incorporando tu feedback para asegurar tu satisfacción.</p>
+                        <h3 class="fs-5 font-display fw-bold text-white mt-4">Revisiones</h3>
+                        <p class="text-white-70 mt-2">Iteramos sobre el desarrollo, incorporando tu feedback para asegurar tu satisfacción.</p>
                     </div>
-                    <!-- Step 4 -->
-                    <div data-aos="fade-up" data-aos-delay="450">
-                        <div class="relative">
-                            <div class="w-24 h-24 glass-card rounded-full flex items-center justify-center mx-auto">
-                                <i data-lucide="rocket" class="w-12 h-12 text-sky-400"></i>
+                    <div class="col-md-3" data-aos="fade-up" data-aos-delay="450">
+                        <div class="position-relative">
+                            <div class="glass-card rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 96px; height: 96px;">
+                                <i data-lucide="rocket" class="text-sky-400" style="width: 48px; height: 48px;"></i>
                             </div>
-                            <span class="absolute top-0 right-1/2 translate-x-12 bg-slate-700 text-white text-xl font-bold w-10 h-10 rounded-full flex items-center justify-center border-4 border-slate-900">4</span>
+                             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary border border-light" style="font-size: 1.1rem; width: 2.5rem; height: 2.5rem; line-height: 1.7rem;">4</span>
                         </div>
-                        <h3 class="text-xl font-display font-bold text-white mt-6">Entrega y Despliegue</h3>
-                        <p class="text-white/70 mt-2">Lanzamos el producto final y te ofrezco soporte para garantizar un inicio exitoso.</p>
+                        <h3 class="fs-5 font-display fw-bold text-white mt-4">Entrega y Despliegue</h3>
+                        <p class="text-white-70 mt-2">Lanzamos el producto final y te ofrezco soporte para garantizar un inicio exitoso.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Section 8: Contact -->
-        <section id="contact" class="py-20">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-display font-bold text-center text-white mb-12" data-aos="fade-up">Contáctame</h2>
-                <div class="max-w-2xl mx-auto glass-card p-8 md:p-12 text-center" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-4xl font-display font-bold text-white">¿Listo para empezar?</h3>
-                    <p class="text-white/70 mt-4 max-w-xl mx-auto">
+        <section id="contact" class="py-5">
+            <div class="container">
+                <h2 class="display-4 font-display fw-bold text-center text-white mb-5" data-aos="fade-up">Contáctame</h2>
+                <div class="mx-auto glass-card p-4 p-md-5 text-center" style="max-width: 54rem;" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="display-4 font-display fw-bold text-white">¿Listo para empezar?</h3>
+                    <p class="text-white-70 mt-4 mx-auto" style="max-width: 42rem;">
                         Actualmente estoy disponible para oportunidades freelance. Si tienes un proyecto en mente o simplemente quieres saludar, ¡mi bandeja de entrada está siempre abierta!
                     </p>
-                    <a href="mailto:davidalejandrochentes@gmail.com" class="inline-flex items-center justify-center mt-8 px-10 py-4 bg-sky-500 text-white font-semibold rounded-lg hover:bg-sky-600 transition-all duration-300 transform hover:scale-105 text-lg">
-                        <i data-lucide="send" class="w-5 h-5 mr-2"></i>
+                    <a href="mailto:davidalejandrochentes@gmail.com" class="btn btn-info text-white fw-semibold mt-4 px-5 py-3 fs-5 d-inline-flex align-items-center gap-2 hover-scale">
+                        <i data-lucide="send" style="width: 20px; height: 20px;"></i>
                         ¡Hablemos!
                     </a>
-                    <div class="mt-10">
-                        <p class="text-white/60">También puedes encontrarme aquí:</p>
-                        <div class="flex justify-center gap-6 mt-4">
-                            <a href="https://github.com/davidalejandrochentes" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-sky-400 transition-colors duration-300" aria-label="Perfil de GitHub">
-                                <i data-lucide="github" class="w-8 h-8"></i>
+                    <div class="mt-5">
+                        <p class="text-white-60">También puedes encontrarme aquí:</p>
+                        <div class="d-flex justify-content-center gap-4 mt-3">
+                            <a href="https://github.com/davidalejandrochentes" target="_blank" rel="noopener noreferrer" class="text-white-80" aria-label="Perfil de GitHub">
+                                <i data-lucide="github" style="width: 32px; height: 32px;"></i>
                             </a>
-                            <a href="http://linkedin.com/in/david-alejandro-chentes-ramos" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-sky-400 transition-colors duration-300" aria-label="Perfil de LinkedIn">
-                                <i data-lucide="linkedin" class="w-8 h-8"></i>
+                            <a href="http://linkedin.com/in/david-alejandro-chentes-ramos" target="_blank" rel="noopener noreferrer" class="text-white-80" aria-label="Perfil de LinkedIn">
+                                <i data-lucide="linkedin" style="width: 32px; height: 32px;"></i>
                             </a>
-                            <a href="https://wa.me/5354214040" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-sky-400 transition-colors duration-300" aria-label="Contactar por WhatsApp">
-                                <i data-lucide="message-circle-more" class="w-8 h-8"></i>
+                            <a href="https://wa.me/5354214040" target="_blank" rel="noopener noreferrer" class="text-white-80" aria-label="Contactar por WhatsApp">
+                                <i data-lucide="message-circle-more" style="width: 32px; height: 32px;"></i>
                             </a>
                         </div>
                     </div>
@@ -460,15 +445,19 @@
     </main>
 
     <!-- Footer -->
-    <footer class="py-10">
-        <div class="container mx-auto px-6 text-center text-white/60">
+    <footer class="py-5">
+        <div class="container text-center text-white-60">
             <p>2025 David A. Chentes</p>
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- AOS (Animate on Scroll) -->
     <script src="assets/js/aos.js"></script>
+    <!-- Lucide Icons -->
     <script src="assets/js/lucide.min.js"></script>
+    <!-- Custom JS -->
     <script src="assets/js/main.js"></script>
     <script>
         AOS.init({
@@ -476,6 +465,11 @@
             once: true,
         });
         lucide.createIcons();
+
+        // Bootstrap scrollspy activation
+        const scrollSpy = new bootstrap.ScrollSpy(document.body, {
+            target: '#navbar-main'
+        });
     </script>
 </body>
 </html>

@@ -105,9 +105,15 @@ main section:first-child {
     visibility: hidden;
 }
 
-/* Estilo para el menú hamburguesa de Bootstrap cuando está colapsado */
-.navbar-toggler[aria-expanded="false"] .lucide-x {
+/* Estilo para el menú hamburguesa de Bootstrap */
+.navbar-toggler .lucide-x {
     display: none;
+}
+.navbar-toggler .lucide-menu {
+    display: block;
+}
+.navbar-toggler[aria-expanded="true"] .lucide-x {
+    display: block;
 }
 .navbar-toggler[aria-expanded="true"] .lucide-menu {
     display: none;

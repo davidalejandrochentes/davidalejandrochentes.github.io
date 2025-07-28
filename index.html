@@ -14,9 +14,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sora:wght@700;800&display=swap" rel="stylesheet">
 
-    <!-- AOS (Animate on Scroll) 
-    <link href="assets/css/aos.css" rel="stylesheet"> -->
-
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
 
@@ -45,12 +42,7 @@
         .nav-link:hover, .nav-link.active {
             color: rgba(255, 255, 255, 1);
         }
-        .hover-scale {
-            transition: transform 0.3s ease-in-out;
-        }
-        .hover-scale:hover {
-            transform: scale(1.05);
-        }
+        
     </style>
 </head>
 <body class="bg-dark">
@@ -107,10 +99,10 @@
                         Convierto ideas en soluciones de software robustas y atractivas. Como desarrollador freelance, me especializo en crear experiencias web a medida que impulsan resultados.
                     </p>
                     <div class="my-3 d-flex justify-content-center justify-content-md-start gap-3" data-aos="fade-up" data-aos-delay="400">
-                        <a href="#portfolio" class="btn btn-info text-white fw-semibold px-4 py-2 hover-scale">
+                        <a href="#portfolio" class="btn btn-info text-white fw-semibold px-4 py-2 ">
                             Proyectos
                         </a>
-                        <a href="#contact" class="btn btn-glass fw-semibold px-4 py-2 hover-scale">
+                        <a href="#contact" class="btn btn-glass fw-semibold px-4 py-2 ">
                             Contáctame
                         </a>
                     </div>
@@ -131,7 +123,7 @@
                         <p class="text-white-80 mt-4">
                             He tenido el honor de ser ponente en convenciones científicas y publicar artículos, lo que refleja mi compromiso con la innovación. Como miembro oficial de Ubuntu en Latinoamérica, contribuyo activamente a la comunidad de software libre, una pasión que complementa mi trabajo profesional.
                         </p>
-                            <a href="assets/pdf/Curriculum Profesional David A. Chentes.pdf" download="Curriculum Profesional David A. Chentes.pdf" class="btn btn-glass fw-semibold mt-2 px-4 py-2 hover-scale">
+                            <a href="assets/pdf/Curriculum Profesional David A. Chentes.pdf" download="Curriculum Profesional David A. Chentes.pdf" class="btn btn-glass fw-semibold mt-2 px-4 py-2 ">
                             Descargar CV
                         </a>
                     </div>
@@ -342,8 +334,8 @@
                             </p>
                             <div class="mt-4">
                                 <h4 class="fw-bold text-white">Dr. C. Fidel Ernesto Hernández Montero</h4>
-                                <p class="text-sm text-white-60">fhernandez@tele.cujae.edu.cu</p>
-                                <p class="text-sm text-white-60">CUJAE</p>
+                                <p class="text-sm text-white-60 my-0">fhernandez@tele.cujae.edu.cu</p>
+                                <p class="text-sm text-white-60 my-0">CUJAE</p>
                             </div>
                         </div>
                     </div>
@@ -355,8 +347,8 @@
                             </p>
                             <div class="mt-4">
                                 <h4 class="fw-bold text-white">Ing. Jorge Luis Blanco Ramos</h4>
-                                <p class="text-sm text-white-60">jorgeluisblanco1970@gmail.com</p>
-                                <p class="text-sm text-white-60">Innovaplast del Ecuador</p>
+                                <p class="text-sm text-white-60 my-0">jorgeluisblanco1970@gmail.com</p>
+                                <p class="text-sm text-white-60 my-0">Innovaplast del Ecuador</p>
                             </div>
                         </div>
                     </div>
@@ -422,7 +414,7 @@
                     <p class="text-white-70 mt-4 mx-auto" style="max-width: 42rem;">
                         Actualmente estoy disponible para oportunidades freelance. Si tienes un proyecto en mente o simplemente quieres saludar, ¡mi bandeja de entrada está siempre abierta!
                     </p>
-                    <a href="mailto:davidalejandrochentes@gmail.com" class="btn btn-info text-white fw-semibold mt-4 px-5 py-3 fs-5 d-inline-flex align-items-center gap-2 hover-scale">
+                    <a href="mailto:davidalejandrochentes@gmail.com" class="btn btn-info text-white fw-semibold mt-4 px-5 py-3 fs-5 d-inline-flex align-items-center gap-2 ">
                         <i data-lucide="send" style="width: 20px; height: 20px;"></i>
                         ¡Hablemos!
                     </a>
@@ -454,17 +446,11 @@
 
     <!-- Bootstrap JS Bundle -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS (Animate on Scroll) -->
-    <script src="assets/js/aos.js"></script>
     <!-- Lucide Icons -->
     <script src="assets/js/lucide.min.js"></script>
     <!-- Custom JS -->
     <script src="assets/js/main.js"></script>
     <script>
-        AOS.init({
-            duration: 800,
-            once: true,
-        });
         lucide.createIcons();
 
         // Bootstrap scrollspy activation

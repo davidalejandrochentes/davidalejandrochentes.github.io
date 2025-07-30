@@ -6,4 +6,4 @@
 
 # Imágen
 
-![alt text](image/davidalejandrochentes.github.io.png)
+![alt text](assets/img/screenshots.png)

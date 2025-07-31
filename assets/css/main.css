@@ -1,13 +1,25 @@
-/* SOLUCIÓN: Usar background-attachment: fixed para evitar el "salto" en móviles */
-body {
+/* SOLUCIÓN 3: Usar altura de viewport dinámica (dvh) y transición suave */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh; /* Usar dvh para adaptarse a la UI del navegador móvil */
     background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../img/fondo.jpg');
-    background-attachment: fixed;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    z-index: -1;
+    /* Transición para suavizar el cambio de altura */
+    transition: height 0.2s ease-in-out;
+}
+
+body {
+    background: none; /* El fondo se maneja en el pseudo-elemento */
     font-family: 'Poppins', sans-serif;
     min-height: 100dvh;
-    position: relative; /* Aseguramos que el z-index funcione correctamente */
+    position: relative;
 }
 
 .font-display {

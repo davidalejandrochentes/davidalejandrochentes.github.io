@@ -11,6 +11,11 @@ const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 const mainNav = document.getElementById('main-nav');
 
 navLinks.forEach(link => {
+    // Ignorar los enlaces que son dropdown toggles
+    if (link.classList.contains('dropdown-toggle')) {
+        return;
+    }
+
     link.addEventListener('click', () => {
         // Solo si el menú está visible (en modo móvil)
         if (mainNav.classList.contains('show')) {
